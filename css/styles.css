@@ -1,0 +1,115 @@
+/** call all your variables in either root or html tag **/
+:root {
+    --heading-color: #672b07;
+    --body-color: #323232; 
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    color: var(--body-color);
+    font-size: 1.6rem;
+}
+
+img {
+    width: 100%;
+}
+
+/** card stying **/
+.card {
+    /** add a max-width to match the size of your image  - so your content is not larger than the image */
+    max-width: 38.0rem; /**380px **/
+    margin: 0 auto 3rem;
+    border-radius: 0.5rem; /**5px*/
+    border: 1px solid #e8e8e8;
+    box-shadow: 0.3rem 0.3rem 0.5rem #e8e8e8;
+}
+
+.card-body {
+    padding: 2.4rem;
+}
+
+.card .flex-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+p {
+    margin-bottom: 2.4rem;
+}
+
+svg {
+    width: 2.25rem;
+    margin: 0 1rem;
+}
+
+svg path {
+    fill: var(--heading-color);
+}
+
+h4 {
+    color: var(--heading-color);
+    font-size: 2.25rem;
+    margin-bottom: 1.2rem;
+}
+
+.card p {
+    font-size: 1.4rem;
+}
+
+.card-footer img {
+    border-radius: 50%;
+    width: 4rem;
+    margin: 0 1rem;
+}
+
+/** if you wanted you could remove the additional margin-bottom off the p tag **/
+.card-footer p {
+    margin-bottom: 0;
+}
+
+/** vertical align items in the footer of the card **/
+.card-footer.flex-container {
+    align-items: center;
+}
+
+/** create a media condition based on where you change your card orientation **/
+@media screen and (min-width: 800px) {
+
+    .card {
+        display: flex;
+        max-width: 75.0rem; 
+    }
+
+    picture {
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: 20rem; /** or 26.667%*/
+    }
+
+    .card-body {
+        /** define your flex-width here **/
+        flex-basis: 55.0rem; /** or 73.333%*/
+        flex-grow: 0;
+        flex-shrink: 0;
+        /** subtract picture width from main container size **/
+    }
+
+}
+
+
+@media  screen and (min-width: 1600px) {
+    .container {
+        width: 80%;
+        margin: 5rem auto;
+    }
+
+    .container.flex-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}

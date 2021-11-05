@@ -1,2 +1,3 @@
-# demo-responsive-card-with-picture-element
+# [DEMO] Responsive Card with Picture Element
+
 Responsive card component with picture element
